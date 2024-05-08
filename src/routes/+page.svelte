@@ -102,8 +102,8 @@
           <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
         </div>
         <div class="form-group">
-          <label for="phone" class="form-label">Phone</label>
-          <input id="phone" name="phone" class="form-input" placeholder="+1 (234) 56789" type="text" />
+          <label for="phone" class="form-label">Twitter</label>
+          <input id="phone" name="phone" class="form-input" placeholder="Your twitter handle" type="text" />
         </div>
         <div class="form-group">
           <label for="message" class="form-label">Message</label>
