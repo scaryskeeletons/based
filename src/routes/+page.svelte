@@ -88,8 +88,8 @@
       </p>
     </div>
     <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="351108a2-a630-4a50-9983-e000100dfd10" />
-      <input type="hidden" name="redirect" value="http://localhost:5173/">
+      <input type="hidden" name="access_key" value="d0c0818b-c515-4cce-aee4-0cb7f7016dde" />
+      <input type="hidden" name="redirect" value="https://devbasedsolana.com/">
       <input type="hidden" name="subject" value="New Contact Form Submission from Contact input" />
       <input type="hidden" name="from_name" value="BasedDev" />
       <div class="form-group-container">
