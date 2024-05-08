@@ -1,5 +1,18 @@
 <!-- page.svelte -->
 <script>
+  import Modal from './Modal.svelte';
+  let showModal = false;
+  let selectedImage = '';
+
+  function openModal(imageSrc) {
+    selectedImage = imageSrc;
+    showModal = true;
+  }
+
+  function closeModal() {
+    showModal = false;
+  }
+
   const imageCount = 3; // Number of images
   const normieCount = 12; // Number of normies
   let images = Array.from({ length: imageCount }, (_, i) => `./s${i + 1}.avif`);
@@ -34,7 +47,7 @@
   <div class="section" id="about">
     <h2>About Anatoliy (The Dev)</h2>
     <p>Anatoliy's mission is to garner a large community and travel the world. The way he sees it is that with the power of his community he will grow the entire web3 ecosystem.</p>
-    <img src='anatoliy.avif' alt={`Picture of Anatoliy`}>
+    <img src='anatoliy.avif' alt={`Picture of Anatoliy`} on:click={() => openModal('anatoliy.avif')}>
   </div>
 
   <div class="section" id="gallery1">
@@ -42,7 +55,7 @@
     <div class="gallery">
       {#each images as image, i}
         <div class="image">
-          <img src={image} alt={`Image ${i + 1}`}>
+          <img src={image} alt={`Image ${i + 1}`} on:click={() => openModal(image)}>
         </div>
       {/each}
     </div>
@@ -60,7 +73,7 @@
     <div class="gallery">
       {#each normies as image, i}
         <div class="image">
-          <img src={image} alt={`Second Gallery Image ${i + 1}`}>
+          <img src={image} alt={`Second Gallery Image ${i + 1}`} on:click={() => openModal(image)}>
           <p>{textPlaceholders[i]}</p>
         </div>
       {/each}
@@ -101,6 +114,8 @@
     </form>
   </section>
 </div>
+
+<Modal {showModal} imageSrc={selectedImage} on:close={closeModal}/>
 
 <style>
   @import "./styles/styles.css";

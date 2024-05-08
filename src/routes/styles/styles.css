@@ -1,6 +1,8 @@
+/* Base and overall layout styles */
 body {
-  color: white; /* Set default text color to white */
-  background-image: url('https://bloximages.chicago2.vip.townnews.com/portlandtribune.com/content/tncms/assets/v3/editorial/b/89/b89a2066-8921-11ed-bcae-07043c772a20/63b058b4cc503.image.jpg'); 
+  cursor: url('cursor.gif'), auto;
+  color: white;
+  background-image: url('https://bloximages.chicago2.vip.townnews.com/portlandtribune.com/content/tncms/assets/v3/editorial/b/89/b89a2066-8921-11ed-bcae-07043c772a20/63b058b4cc503.image.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -8,15 +10,18 @@ body {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 50px; /* Large headings */
+  text-align: center;
 }
 
 h2 {
-  font-size: 35px;
+  font-size: 35px; /* Medium headings */
+  text-align: center;
 }
 
 p {
-  font-size: 22px;
+  font-size: 22px; /* Paragraph text */
+  text-align: center;
 }
 
 .container {
@@ -26,6 +31,31 @@ p {
   width: 100%;
 }
 
+/* Modal styles */
+.modal-backdrop {
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  z-index: 2000;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+/* Section and button styles */
 .section button {
   margin-bottom: 5px;
   width: 180px;
@@ -36,17 +66,17 @@ p {
 
 #about {
   justify-content: center;
-  text-align: center; /* Centers text horizontally */
-  width: 100%; /* Adjust width as needed */
+  text-align: center;
+  width: 100%;
 }
 
 #about img {
   justify-content: center;
-  max-width: 400px;
-  max-height: 400px;
   max-width: 100%; /* Ensures the image is responsive and does not overflow its container */
+  max-height: 400px;
 }
 
+/* Gallery and image styles */
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -54,7 +84,6 @@ p {
   padding: 20px;
   margin: 20px;
 }
-
 
 .image {
   background: rgba(128, 128, 128, 0);
@@ -72,20 +101,21 @@ p {
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
-  z-index: 1;
 }
 
+/* Additional section styling */
 .section {
   text-align: center;
   max-width: 800px;
   width: 100%;
-  margin: 10 auto;
+  margin: 0 auto;
   margin-bottom: 20px;
   padding: 20px;
   border: 1px solid #ccc;
-  background-color: rgba(0, 0, 0, 0.5); /* Adding a dark semi-transparent overlay */
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* Text overlay on images */
 .image p {
   position: absolute;
   top: 0;
@@ -96,12 +126,12 @@ p {
   text-align: center;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.5);
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  box-sizing: border-box;
 }
 
-.rainbow-text.spinning-text {
-  animation: rainbow-animation 2s infinite, spinning-animation 4s infinite linear;
-  transform-style: preserve-3d; /* Ensures 3D rotations are possible */
+/* Animations and text effects */
+.rainbow-text {
+  animation: rainbow-animation 2s infinite;
 }
 
 .spinning-text {
@@ -109,8 +139,9 @@ p {
   transform-style: preserve-3d;
 }
 
-.rainbow-text {
-  animation: rainbow-animation 2s infinite;
+.rainbow-text.spinning-text {
+  animation: rainbow-animation 2s infinite, spinning-animation 4s infinite linear;
+  transform-style: preserve-3d; /* Ensures 3D rotations are possible */
 }
 
 @keyframes rainbow-animation {
@@ -127,6 +158,7 @@ p {
   to { transform: rotateY(360deg); }
 }
 
+/* Contact form styles */
 .contact-section {
   margin-bottom: 20px;
   padding: 20px;
@@ -175,8 +207,7 @@ p {
   text-align: center;
 }
 
-.form-input,
-.form-textarea {
+.form-input, .form-textarea {
   padding: 0.5rem;
   border: 1px solid #e5e7eb;
   display: flex;
@@ -187,13 +218,11 @@ p {
   line-height: 1.25rem;
 }
 
-.form-input::placeholder,
-.form-textarea:focus-visible {
+.form-input::placeholder, .form-textarea:focus-visible {
   color: #6b7280;
 }
 
-.form-input:focus-visible,
-.form-textarea:focus-visible {
+.form-input:focus-visible, .form-textarea:focus-visible {
   outline: 2px solid #2563eb;
   outline-offset: 2px;
 }
@@ -209,4 +238,46 @@ p {
   color: #fff;
   padding: 13px 5px;
   border-radius: 0.375rem;
+}
+
+/* Media queries for responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px; /* Smaller font size for headings */
+  }
+
+  h2 {
+    font-size: 24px; /* Smaller font size for sub-headings */
+  }
+
+  p, .form-label, .contact-title {
+    font-size: 16px; /* Smaller font size for general text */
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* Adjust number of columns for gallery */
+  }
+
+  .section, .contact-section {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .section button, .form-submit {
+    width: auto; /* Adjust button widths */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr; /* Single column layout for very small devices */
+  }
+
+  .section button {
+    width: 100%; /* Full-width buttons for better touch interaction */
+  }
+
+  .form-group-container {
+    display: block; /* Stack form elements vertically on smaller screens */
+  }
 }
