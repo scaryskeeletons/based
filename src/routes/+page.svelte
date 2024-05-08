@@ -1,6 +1,6 @@
 <!-- page.svelte -->
 <script>
-  import Modal from './Modal.svelte';
+  import Modal from './scripts/modal.svelte';
   let showModal = false;
   let selectedImage = '';
 
