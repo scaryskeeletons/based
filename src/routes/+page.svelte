@@ -1,6 +1,7 @@
 <!-- page.svelte -->
 <script>
   import Modal from './scripts/modal.svelte';
+  import LandingPopup from './scripts/LandingPopup.svelte'; // Import the LandingPopup component
   let showModal = false;
   let selectedImage = '';
 
@@ -14,11 +15,13 @@
   }
 
   const imageCount = 3; // Number of images
-  const normieCount = 12; // Number of normies
+  const normieCount = 22; // Number of normies
   let images = Array.from({ length: imageCount }, (_, i) => `./s${i + 1}.avif`);
   let normies = Array.from({ length: normieCount }, (_, i) => `./normie${i + 1}.avif`);
   let textPlaceholders = Array.from({ length: normieCount }, (_, i) => `Normie ${i + 1}`);
 </script>
+
+<LandingPopup /> <!-- Include the popup at the start of your app -->
 
 <div class="container">
   <div class="section" id="intro">
@@ -31,17 +34,17 @@
     <h1>$BASED Links</h1>
     <a href="https://t.me/DevBasedSolana" target="_blank">
       <button type="button">Telegram</button>
-  </a>
-  <a href="https://twitter.com/DevBasedSolana" target="_blank">
-    <button type="button">Twitter</button>
-</a>
-  <a href="https://www.dextools.io/app/en/solana/pair-explorer/7rhUbTbunhohLoxQs1powsr7hs4jKJVbuwgb3erzZ6HH?t=1715043598473" target="_blank">
+    </a>
+    <a href="https://twitter.com/DevBasedSolana" target="_blank">
+      <button type="button">Twitter</button>
+    </a>
+    <a href="https://www.dextools.io/app/en/solana/pair-explorer/7rhUbTbunhohLoxQs1powsr7hs4jKJVbuwgb3erzZ6HH?t=1715043598473" target="_blank">
       <button type="button">Dextools</button>
-  </a>
-  <a href="https://dexscreener.com/solana/7rhubtbunhohloxqs1powsr7hs4jkjvbuwgb3erzz6hh" target="_blank">
+    </a>
+    <a href="https://dexscreener.com/solana/7rhubtbunhohloxqs1powsr7hs4jkjvbuwgb3erzz6hh" target="_blank">
       <button type="button">Dexscreener</button>
-  </a>
-  <button type="button">Merch (TBA)</button>
+    </a>
+    <button type="button">Merch (TBA)</button>
   </div>
 
   <div class="section" id="about">
@@ -98,7 +101,7 @@
           <input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
         </div>
         <div class="form-group">
-          <label for="email" class="form-label">Email</label>
+          <label for="email" the class="form-label">Email</label>
           <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
         </div>
         <div class="form-group">
