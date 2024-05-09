@@ -80,6 +80,7 @@
 
     @media (max-width: 480px) {
       .landing-popup {
+        max-width: auto;
         background-image: url('https://github.com/scaryskeeletons/based/raw/main/static/seizuremobile.avif');
       }
     }
