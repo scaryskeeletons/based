@@ -57,7 +57,7 @@
       height: 100%;
       background-repeat: no-repeat;
       background-size: cover;
-      background-image: url('notice_of_seizure.avif');
+      background-image: url('https://github.com/scaryskeeletons/based/raw/main/static/notice_of_seizure.avif');
       color: white;
       display: flex;
       justify-content: center;
