@@ -267,14 +267,17 @@ p {
 /* Media queries for responsive adjustments */
 @media (max-width: 768px) {
   h1 {
+    font-family: h1;
     font-size: 32px; /* Smaller font size for headings */
   }
 
   h2 {
+    font-family: h1;
     font-size: 24px; /* Smaller font size for sub-headings */
   }
 
   p, .form-label, .contact-title {
+    font-family: p;
     font-size: 16px; /* Smaller font size for general text */
   }
 
