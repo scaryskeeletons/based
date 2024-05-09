@@ -30,6 +30,7 @@
 
 <div class="container">
   {#if sectionsVisible}
+
     <div class="section" id="intro">
       <h1 class="rainbow-text spinning-text">Welcome to $BASED</h1>
       <p>From Bank of America full-stack developer to $BASED founder.</p>
@@ -50,7 +51,6 @@
       <a href="https://dexscreener.com/solana/7rhubtbunhohloxqs1powsr7hs4jkjvbuwgb3erzz6hh" target="_blank">
         <button type="button">Dexscreener</button>
       </a>
-      <button type="button">Merch (TBA)</button>
     </div>
 
     <div class="section" id="about">
