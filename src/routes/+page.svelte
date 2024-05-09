@@ -15,7 +15,7 @@
   }
 
   const imageCount = 3; // Number of images
-  const normieCount = 22; // Number of normies
+  const normieCount = 2; // Number of normies
   let images = Array.from({ length: imageCount }, (_, i) => `./s${i + 1}.avif`);
   let normies = Array.from({ length: normieCount }, (_, i) => `./normie${i + 1}.avif`);
   let textPlaceholders = Array.from({ length: normieCount }, (_, i) => `Normie ${i + 1}`);
