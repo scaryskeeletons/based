@@ -12,12 +12,12 @@ body {
 
 @font-face {
   font-family: h1;
-  src: url(SuperRetroM54.ttf);
+  src: url('https://raw.githubusercontent.com/scaryskeeletons/based/main/static/SuperRetroM54.ttf');
 }
 
 @font-face {
   font-family: p;
-  src: url(MiriamMonoCLM-Book.ttf);
+  src: url('https://raw.githubusercontent.com/scaryskeeletons/based/main/static/MiriamMonoCLM-Book.ttf');
 }
 
 h1 {
