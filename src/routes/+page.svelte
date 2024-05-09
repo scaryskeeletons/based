@@ -1,7 +1,7 @@
 <!-- page.svelte -->
 <script>
-  import Modal from './scripts/modal.svelte';
-  import LandingPopup from './scripts/LandingPopup.svelte'; // Import the LandingPopup component
+  import Modal from './addons/modal.svelte';
+  import LandingPopup from './addons/popup.svelte'; // Import the LandingPopup component
   let showModal = false;
   let selectedImage = '';
 
@@ -101,7 +101,7 @@
           <input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
         </div>
         <div class="form-group">
-          <label for="email" the class="form-label">Email</label>
+          <label for="email" class="form-label">Email</label>
           <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
         </div>
         <div class="form-group">
