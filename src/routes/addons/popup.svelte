@@ -77,5 +77,11 @@
     .shake {
       animation: shake 500ms; /* Animation duration matches the time to start hiding */
     }
+
+    @media (max-width: 480px) {
+      .landing-popup {
+        background-image: url('https://github.com/scaryskeeletons/based/raw/main/static/seizuremobile.avif');
+      }
+    }
   </style>
   
