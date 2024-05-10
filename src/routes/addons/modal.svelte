@@ -41,23 +41,25 @@
   
   .modal-content {
     position: relative;
-    padding: 14px; /* Ensure there's space for the close button */
+    padding: 20px; /* Ensure there's space for the close button */
   }
 
   .modal-close {
     z-index: 2001;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     border: none;
     background: transparent;
     color: #ff0202; /* Adjust based on your modal's styling */
-    font-size: 18px;
+    font-size: 40px;
     cursor: pointer;
-    padding: 0 1px 1px 1px; /* Adjust for better positioning */
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 5px 5px 5px 5px; /* Adjust for better positioning */
   }
 
   .modal-backdrop {
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;

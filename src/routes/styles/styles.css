@@ -300,6 +300,10 @@ p {
     grid-template-columns: 1fr; /* Single column layout for very small devices */
   }
 
+  .section, #about {
+    width: 95%;
+  }
+
   .section button {
     width: 100%; /* Full-width buttons for better touch interaction */
   }
