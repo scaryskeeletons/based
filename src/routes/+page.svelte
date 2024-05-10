@@ -20,7 +20,7 @@
   }, 1000); // Delay of 1000 milliseconds (1 second)
 
   const imageCount = 12;
-  const normieCount = 24;
+  const normieCount = 12;
   let images = Array.from({ length: imageCount }, (_, i) => `./s${i + 1}.avif`);
   let normies = Array.from({ length: normieCount }, (_, i) => `./normie${i + 1}.avif`);
   let textPlaceholders = Array.from({ length: normieCount }, (_, i) => `Normie ${i + 1}`);
@@ -68,6 +68,9 @@
           </div>
         {/each}
       </div>
+      <a href="/memes">
+        <button type="button">Show more</button>
+      </a>
     </div>
 
     <div class="section" id="story">
@@ -87,8 +90,13 @@
           </div>
         {/each}
       </div>
+      <a href="/normies">
+        <button type="button">Show more</button>
+      </a>
     </div>
 
+
+    
     <section class="contact-section">
       <div class="contact-intro">
         <h2 class="contact-title">Get in Touch</h2>
