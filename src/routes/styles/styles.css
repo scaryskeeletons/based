@@ -302,18 +302,14 @@ p {
 }
 
 @media (max-width: 480px) {
-  .gallery {
-    grid-template-columns: 1fr; /* Single column layout for very small devices */
-  }
-
-  .section, #about {
+  .section {
     width: 95%;
   }
 
   .section button {
     width: 100%; /* Full-width buttons for better touch interaction */
   }
-
+ /* Code is bullshit love life  */
   .form-group-container {
     display: block; /* Stack form elements vertically on smaller screens */
   }
