@@ -74,7 +74,7 @@
     </div>
 
     <div class="section" id="story">
-      <h2>The Story</h2>
+      <h2>TEST TEST The Story</h2>
       <p>The Dev recently got TERMINATED from Bank of America for creating Fuck The Bank token. Many people made some good money, but the dev didn't sell at all. The dev is not a bitch and will never dump on friends/holders. $BASED wants to change the game in meme creating and set the standard high for any future devs. The dev is now full time into crypto and will continue working hard for your bag. The dev won't ever sell any tokens, only burn or give away.</p>
       <p>The goal is to get a Kick Contract and stream 24/7. $BASED wants to connect with Phantom Wallet and get a sponsorship. </p>
     </div>
