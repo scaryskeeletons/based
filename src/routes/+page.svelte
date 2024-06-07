@@ -1,8 +1,9 @@
 <script>
   import Modal from './addons/modal.svelte';
+  import LandingPopup from './addons/popup.svelte';
   let showModal = false;
   let selectedImage = '';
-  let sectionsVisible = true;
+  let sectionsVisible = false;
 
   function openModal(imageSrc) {
     selectedImage = imageSrc;
@@ -13,12 +14,19 @@
     showModal = false;
   }
 
+  // Timeout to delay the loading of sections
+  setTimeout(() => {
+    sectionsVisible = true;
+  }, 1000); // Delay of 1000 milliseconds (1 second)
+
   const imageCount = 12;
   const normieCount = 12;
   let images = Array.from({ length: imageCount }, (_, i) => `./s${i + 1}.avif`);
   let normies = Array.from({ length: normieCount }, (_, i) => `./normie${i + 1}.avif`);
   let textPlaceholders = Array.from({ length: normieCount }, (_, i) => `Normie ${i + 1}`);
 </script>
+
+<LandingPopup />
 
 <div class="container">
   {#if sectionsVisible}
